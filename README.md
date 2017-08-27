@@ -1,3 +1,5 @@
 # On-The-Go
-A blog website where users can share their thoughts and views  that runs on openshift .
-The site is hosted at www.onthego.co.in .
+A Blogging Space to share articles online. :zap: First Amateur Project in early stages of Grad Life :zap: 
+  - Backend : PHP, MySQL
+  - Frontend: jQuery, pureCSS
+ Visit  http://www.onthego.space :smile:
