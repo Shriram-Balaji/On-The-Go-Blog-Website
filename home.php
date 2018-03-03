@@ -40,14 +40,16 @@ else
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="css/layouts/post-old-ie.css">
     <![endif]-->
-    <!--[if gt IE 8]><!-->        <link rel="stylesheet" href="css/post.css">
+    <!--[if gt IE 8]><!-->     
+
     <!--<![endif]-->
+
+   <link rel="stylesheet" href="css/post.css">
+
   
 
-<!--popup-->
 
 
-<link rel="stylesheet" type="text/css" href="css/poopup.css">
 <script src="js/jquery-2.1.4.min.js"></script>
 
 <script src="js/classie.js"></script>
@@ -116,12 +118,12 @@ else
                    <li class="pure-menu-item">
                    <span class="profile_icon"><i class="fa fa-user fa-lg"></i></span>
                    <a href="userprofile.php" class="pure-menu-link">Profile</a></li>                                  
-<span class="settings_icon"><i class="fa fa-cog fa-spin fa-lg"></i></span> 
+<span class="settings_icon"><i class="fa fa-cog  fa-lg"></i></span> 
                     <li class="pure-menu-item"><a href="settings.php" class="pure-menu-link">Settings</a></li>
                     <span class="logout_icon"><i class="fa fa-power-off fa-lg"></i></span> 
                     <li class="pure-menu-item"><a href="logout.php" class="pure-menu-link">Logout</a></li>
                     
-<span class="about_icon"><i class="fa fa-hand-peace-o fa-lg"></i></span> 
+<span class="about_icon"><i class="fa fa-heart fa-lg"></i></span> 
                     <li class="pure-menu-item"><a href="aboutus.html" class="pure-menu-link" style="opacity:0.9;" id="about_us">About Us</a></li>
 
             </ul>
@@ -543,7 +545,7 @@ $('#search').on('mouseleave touchend',function(event) {
 
 });
 
-$('.primary-button').on('click touchstart',function(event) {
+$('.primary-button').bind('click touchstart',function() {
   window.location.href = "../aboutus.html";
 });
 //functionality for the technology category starts here.
@@ -1079,12 +1081,36 @@ $('#tech,#travel,#ent,#fashion,#design').on('click',function(e){
         toggleClass(menu, active);
         toggleClass(menuLink, active);
 
+                $('body').css("background","transparent");
+          $('body').css("position","relative");
+      
+     
 
 });
 
 
 }
    
+
+$('#menuLink').click(function(event) {
+  /* Act on the event */
+  if($('#layout').hasClass('active'))
+ {
+    $('body').css("position","fixed" );
+$('body').css("background","rgba(0, 0, 0, 0.4)");
+
+ }
+ else
+ {
+
+        $('body').css("position","relative");
+    
+        $('body').css("background","transparent");
+
+       
+ }
+});
+
 </script>
 <link rel="stylesheet" href="jAlert-master/src/jAlert-v3.css" />
 

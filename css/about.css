@@ -113,6 +113,12 @@ a.pure-button-primary {
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
     display: block;
+
+    position: fixed;
+    width: 100%;
+    margin-left: -9px;
+    padding-right: 30px;
+    margin-top: -10px;
 }
 .home-menu {
    
@@ -325,6 +331,7 @@ margin-left: -9px;
     }
         .home-menu ul {
             float: right;
+            list-style: none;
         }
 
     /* We increase the height of the splash-container */

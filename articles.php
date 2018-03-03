@@ -117,17 +117,18 @@ catch(Exception $e){
 
 		<!--Checking if post is already liked by user and changing css accordingly -->
 		<?php
-$check = $db->prepare("SELECT ID FROM LIKES WHERE AUTHOR = '$user_info' AND ARTICLE_ID = '$article_id'");
+$check = $db->prepare("SELECT * FROM LIKES WHERE AUTHOR = '$user_info' AND ARTICLE_ID = '$article_id'");
 $check->execute();
 $rows = $check->fetch(PDO::FETCH_NUM);
 
-if(!empty($rows)){?>
+if($rows > 0)
+	{?>
 <script>
 $('.heart').css("background-position","right");
 </script>
 <?php
 }
-else if(empty($rows) or $rows == 0)
+else if( $rows == 0)
 {?>
 	<script>
 $('.heart').css("background-position","left");

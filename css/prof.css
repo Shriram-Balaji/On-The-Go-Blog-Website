@@ -250,7 +250,7 @@ body {
 }
 .default_image {
     border: 4px outset black;
-    margin-left: 260px !important;
+    margin-left: 300px !important;
     margin-top: -70px !important;
 }
 .update_details {
@@ -266,7 +266,7 @@ body {
 .profile_details {
 font-size: 1em;
 height: 280px;
-margin-left: -498px;
+margin-left: -485px;
 overflow-x: hidden;
 padding-left: 17px !important;
 position: relative;
@@ -284,7 +284,7 @@ margin-left: 65px;
 }
 .update_yourpic {
    font-size: 130%;
-margin-left: 263px;
+margin-left: 303px;
 top: -170px;
 width: 65%;
 }
@@ -325,13 +325,14 @@ width: 65%;
     margin-top: 280px;
     position: absolute;
     text-align: center;
+    max-width: 270px;
 }
 #delete_img {
     
        border-radius: 3px;
     color: white;
     display: none;
-    margin-left: -447px;
+    margin-left: -407px;
     margin-top: 310px;
     position: absolute;
     z-index: 9999;

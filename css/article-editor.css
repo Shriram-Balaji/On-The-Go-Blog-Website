@@ -23,11 +23,11 @@ color: #000;
 
 margin-bottom: 31px;
 padding: 4.5em 60px;
-width: 1000px;
+width: 90%;
 height: 100%;
 position: relative;
 top: 50%;
-left: -114px;
+left: 80px;
 font-family: 'Raleway' !important;
 
     }
@@ -39,14 +39,14 @@ font-family: 'Raleway' !important;
 	margin-bottom: 30px;
 
  color: #fff;
- margin-left: -115px;
+ margin-left: 80px;
 }
 
 .close{
 
 	position: relative;
 margin-bottom: 20px;	
-margin-left: 1190px;
+margin-left: 1060px;
 
 color: #fff !important;
 
@@ -76,7 +76,7 @@ color: #000;
 font-size: 100%;
 margin-bottom: 30px;
 padding: 2.5em 20px;
-width: 290px;
+width: 90%;
 height: 100%;
 position: relative;
 top: 50%;

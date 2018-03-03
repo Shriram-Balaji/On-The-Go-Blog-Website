@@ -15,7 +15,7 @@ span.fashion_icon,span.travel_icon,span.profile_icon,
 span.settings_icon,span.logout_icon,span.about_icon {
         position: absolute;
         left: 7px;
-        margin-top: 16px;
+        margin-top: 14px;
         z-index: 1;
         color: white;
         background: transparent;
@@ -285,7 +285,7 @@ div#menu {}
         }
           
         
-        #about_us{
+        #about_us,.about_icon{
             display: none;
         }
    
@@ -294,7 +294,7 @@ span.fashion_icon,span.travel_icon,span.profile_icon,
 span.settings_icon,span.logout_icon,span.about_icon {
         position: absolute;
         margin-left: 20px;
-        margin-top: 5px;
+        margin-top: 10px;
         z-index: 1;
         color: white;
 

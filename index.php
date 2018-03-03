@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 session_start();
 require_once('password.php');
 require_once('connection.php');
@@ -7,14 +7,19 @@ require_once('connection.php');
  ?>
 <!DOCTYPE html>
 <html>
+
+
 <!--Copyright 2015
 Credit:
 Shriram Balaji   Nadeem Shaik
 St. Joseph's College Of Engineering
 -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><head>
+<meta name="google-site-verification" content="AzfNiWKK_ll-2MH9EjIFizj4GinsgApw58YCoUiUmyY" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 <meta name="viewport" content=" width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 
 
 
@@ -26,13 +31,14 @@ St. Joseph's College Of Engineering
 
 <!--Import Google Icon Font-->
       <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      
+
       <link type="text/css" rel="stylesheet" href="css/login-materialize.css"  media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 
     <link rel="stylesheet" type="text/css" href="css/loading.css" />
     <script src="js/modernizr.custom.js"></script>
     <script src="js/classie.js"></script>
+
 
 <style>
 @import "//fonts.googleapis.com/css?family=Montserrat:400,300,800|Lora:400italic|Playfair+Display:700";
@@ -45,18 +51,18 @@ body {
 .bg-img
 {
     min-height: 100%;
-  min-width: 1024px;
-  
+
+
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
-  
+
   /* Set up positioning */
   position: fixed;
   top: 0;
   left: 0;
-    background-image: url("../img/bg.jpg");
-    background-size: cover;
+  background-image:        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+url("../img/back.jpg");    background-size: cover;
 }
 .loading {
    position: absolute;
@@ -143,7 +149,7 @@ text-shadow: 1px 1px 2px #039be5, 0 0 1px white, 0 0 5px #1b73f8;
 padding: 20px;
 border-radius: 3px;
 position: absolute;
-right: 200px;
+right: 60px;
 top: 100px;
 background: transparent none repeat scroll 0% 0%;
 box-shadow: 2px 3px #050404;
@@ -209,6 +215,7 @@ color: white;
 
 /* Media Queries start here for 960,484,768,640,480 and 320 */
 
+
 @media screen and (max-width:960px){
 
 .logo{
@@ -216,14 +223,17 @@ left:100px;
 
 }
 
+
 }
 @media screen and (max-width:848px){
+
 
 .login-block{
 right:0px;
 left: 270px;
 
 }
+
 
 .welcome-text{
 
@@ -240,9 +250,11 @@ left: 290px
 
 }
 
+
+
 .login-block{
 
-top:120px;
+top:30px;
 right:0px;
 left: 300px;
 width:400px;
@@ -269,7 +281,7 @@ left:120px;
 }
 
 .logo-title{
-left:120px;
+display: none;
 }
 
 .login-block{
@@ -312,7 +324,7 @@ display: none;
 
 .login-block{
 
-top:30px;
+top:35px;
 right:0px;
 left: 15px;
 width:320px !important;
@@ -341,6 +353,7 @@ font-size: 120%;
 left:120px;
 
 }
+
 }
 
  @media (max-height:320px){
@@ -352,43 +365,29 @@ font-size: 16px;
 
 
 }
-#otglogo
-{
-  display: none;
-}
+
+
+
 .footer{
 
 display: none;
 }
 
+
+
 .logo-title{
-
-font-size: 26px;
-display: block;
-
+display: none;
 }
 
 .login-block{
 
     width: 320px;
-    top: 115px;
-    left: 0px;
+    top: 35px;
+
     right: 0px;
-    /*Testing widths*/
-    border-radius: 3px;
-    border-top: 4px solid #039BE5;
-    border-right: 0px none;
-    border-bottom: 0px none;
-    box-shadow: none;
-}
-
-.welcome-text{
-
-top:450px;
-right:0px;
-left: 15px
 
 }
+
 
 .logo{
 
@@ -404,7 +403,7 @@ left:100px;
 
 <body>
 <script type="text/javascript">
-	
+
 //init code for facebook login starts here
  (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -418,7 +417,7 @@ left:100px;
  window.fbAsyncInit = function() {
   FB.init({
     appId      : '799680073475396',
-    cookie     : true,  // enable cookies to allow the server to access 
+    cookie     : true,  // enable cookies to allow the server to access
                         // the session
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.0' // use version 2.2
@@ -439,8 +438,8 @@ left:100px;
 
 //login with facebook starts here
 
- 
-  // Now that we've initialized the JavaScript SDK, we call 
+
+  // Now that we've initialized the JavaScript SDK, we call
   // FB.getLoginStatus().  This function gets the state of the
   // person visiting this page and can return one of three states to
   // the callback you provide.  They can be:
@@ -470,19 +469,19 @@ function statusChangeCallback(response) {
 
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
-      
+
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-    
+
     }
-  
+
 }
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
   // code below.
 
-  
+
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
@@ -493,10 +492,10 @@ function statusChangeCallback(response) {
 $(document).ready(function(){
 $('#fblogin').click(function(){
  FB.login(function(response) {
-         if (response.authResponse) 
+         if (response.authResponse)
          {
              testAPI(); //Get User Information.
-              
+
 
           } else
           {
@@ -511,13 +510,13 @@ $('#fblogin').click(function(){
    function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
 FB.api('/me?fields=id,name,email,picture,first_name,birthday,last_name', function(response) {
-	
+
 	 var fblogin = $.ajax({
     type : "POST",
    data: response,
    dataType : 'json',
    url : 'facebook_login.php',
-   
+
    cache : false,
 
 
@@ -530,8 +529,8 @@ FB.api('/me?fields=id,name,email,picture,first_name,birthday,last_name', functio
 
 
       console.log('Successful login for: ' + response.name);
-      
-  
+
+
     });
 
 
@@ -546,7 +545,7 @@ FB.api('/me?fields=id,name,email,picture,first_name,birthday,last_name', functio
 
 </div>
 
-<div class="logo"> 
+<div class="logo">
 
 <div class = "logo-title"><img src = "../img/logo.png" id = "otglogo"/></div> <br>
 
@@ -557,24 +556,24 @@ FB.api('/me?fields=id,name,email,picture,first_name,birthday,last_name', functio
 <div class="login-block" id="log">
 
 <div class="row tab-header">
-      
+
       <ul class="tabs">
 
         <li class="tab col s6 light"><a  class="active " href="#login">Login</a></li>
         <li class="tab col s6" class = "active"id="signup-tab"><a href="#signup">Sign Up</a></li>
-      
+
       </ul>
 
 </div>
 
 <div id="login" class="col s12">
 <form class="loginform"  method="post" action ="user_login.php"  >
-                   
+
                     <p>
                         <input type="text" name="username"id="username" placeholder="Username or email" required >
                     </p>
                     <p>
-                        <input type="password" name="password"   placeholder="Password" required id ="password"> 
+                        <input type="password" name="password"   placeholder="Password" required id ="password">
                     </p>
 
     <button class="btn waves-effect light-blue " id="login_submit" type="submit" name="action" data-anim="la-anim-1">Log In</button>
@@ -593,7 +592,7 @@ FB.api('/me?fields=id,name,email,picture,first_name,birthday,last_name', functio
 
 <div id="signup" class="col s12">
 <form class="signup_form"  method="post" name = "signup_form" id = "signup_form"   >
-  
+
     <input type="text" value="" placeholder="Username" id="user-name" name="user-name" />
 
     <input type="password" value="" placeholder="Password" id="passwd" name="passwd" />
@@ -629,36 +628,36 @@ FB.api('/me?fields=id,name,email,picture,first_name,birthday,last_name', functio
 $('#send').click(function(event) {
   /* Act on the event */
 
-        
+
    var email = $("#frgt_mail").val();
   $.ajax({ url: 'recovery.php',
      data: {'email' : email , 'update' : 'password'},
      type: 'post',
- 
+
      cache:false,
      success: function(data) {
-                  
+
   Materialize.toast('Your details have been sent. Please check your mail!', 3000);
-                  
+
               }
-     
+
 });
 
 });
- $("#signup-tab").click(function(e){   
+ $("#signup-tab").click(function(e){
  $("#signup-submit").click(function(e){
     console.log('done');
-      e.preventDefault();  
+      e.preventDefault();
 
 var dataString = $("#signup_form").serialize();
 
-  
-   var login = $.ajax({ 
+
+   var login = $.ajax({
      url: "hello.php",
      data : dataString,
      type: "POST",
      dataType:'json',
-    
+
 });
 
 login.done(function(){
@@ -669,7 +668,7 @@ window.location.href = "index.php";
 
 });
 
-});  
+});
 
 
 });
@@ -681,9 +680,7 @@ var password = $('#password').val();
 
 if(username.length<=0 && password.length<=0)
 {
-  
 alert("empty");
-    
 }
  /* Act on the event */
 });
@@ -691,7 +688,7 @@ alert("empty");
 
 $('#fblogin').click(function(){
 
- 
+
 $(document).ajaxComplete(function(){
 $('.la-anim-1').show();
 
@@ -719,9 +716,6 @@ var inProgress = false;
           if( inProgress ) return false;
           inProgress = true;
           classie.add( animEl, 'la-animate' );
-
-        
-
           setTimeout( function() {
             classie.remove( animEl, 'la-animate' );
             inProgress = false;

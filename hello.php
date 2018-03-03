@@ -23,7 +23,7 @@ $query = $db -> prepare("INSERT INTO LOGIN (USERNAME,USER_ID,EMAIL,PASSWORD,FIRS
         $query->bindParam(5,$firstname);
         $query->bindParam(6,$lastname);
         $query->execute();
-		
+
         $_SESSION['username_id'] = $username;
 $data = '<span>Thanks for Registering !</span>';
 echo $data;
@@ -31,6 +31,7 @@ echo $data;
 
      catch(Exception $e)
      {
- 
+       echo $e->getMessage();
+
      }
      ?>
