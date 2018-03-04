@@ -1,0 +1,23 @@
+{
+  "name": "on-the-go-blog",
+  "version": "2.0.1",
+  "description": "A blog website to share articles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shriram-Balaji/On-The-Go-Blog-Website.git"
+  },
+  "keywords": [
+    "first-project",
+    "php"
+  ],
+  "author": "Shriram Balaji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shriram-Balaji/On-The-Go-Blog-Website/issues"
+  },
+  "homepage": "https://github.com/Shriram-Balaji/On-The-Go-Blog-Website#readme"
+}

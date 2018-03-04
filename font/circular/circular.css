@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Circular Medium";
+  src: url("./circular-medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Circular Book";
+  src: url("./circular-book.woff") format("woff");
+}

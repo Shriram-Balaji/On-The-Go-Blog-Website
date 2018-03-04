@@ -5,9 +5,7 @@ require_once('connection.php');
   //$post_article
 $start = isset($_GET['start'])? (int)$_GET['start'] - 1 : 0;
 $count = isset($_GET['count'])? (int)$_GET['count'] : 1;
-
 $category = isset($_GET['category'])? $_GET['category'] : "all";
-
 try
 {
 if($category == "all")
@@ -29,8 +27,6 @@ $all_article = $results_all['ARTICLE'];
 $all_author = $results_all['AUTHOR'];
 $all_articleid = $results_all['ARTICLE_ID'];
 $all_articleno = $results_all['ARTICLE_NO'];
-
-
 $query_user = $db->prepare("SELECT * FROM LOGIN WHERE USERNAME = ?");
 $query_user->bindParam(1,$all_author);
 $query_user->execute();
@@ -42,7 +38,6 @@ $profile_name = $rows['USERNAME'];
 //echo json_encode($response)
 
 $items[] = (array(
-
 'post-title' => $all_title ,
 'post-author' => $all_author,
 'post-description' => $all_description,
@@ -52,23 +47,15 @@ $items[] = (array(
 'article_id' => $all_articleid,
 'article_no'=> $all_articleno
 	));
-
-
-
 }
 echo json_encode(array(
-
 	'items' => $items,
 	'articles_count' => $articles_count,
 	'start' => $start,
 	'last' => ($start + $count)>=($articles_count)? true : false,
-
-
 	));
-
 }
 else if($category == "Popular")
-
 {
 $query_popular = $db->prepare("SELECT  SQL_CALC_FOUND_ROWS * FROM BLOGCONTENT  ORDER BY LIKE_COUNT DESC LIMIT {$start},{$count}");
 $query_popular->execute();
@@ -99,29 +86,22 @@ $profile_name = $rows['USERNAME'];
 //echo json_encode($response)
 
 $items[] = (array(
-
-'post-title' => $popular_title ,
-'post-author' => $popular_author,
-'post-description' => $popular_description,
-'post-category' => $popular_category,
-'profile-name' => $profile_name,
-'article_id' => $popular_articleid,
-'article_no'=> $popular_articleno
+	'post-title' => $popular_title ,
+	'post-author' => $popular_author,
+	'post-description' => $popular_description,
+	'post-category' => $popular_category,
+	'profile-name' => $profile_name,
+	'article_id' => $popular_articleid,
+	'article_no'=> $popular_articleno
 	));
-
-
-
 }
-echo json_encode(array(
 
+echo json_encode(array(
 	'items' => $items,
 	'articles_count' => $articles_count,
 	'start' => $start,
 	'last' => ($start + $count)>=($articles_count)? true : false,
-
-
 	));
-
 }
 else
 {
@@ -151,7 +131,6 @@ $post_profile_name = $rows['USERNAME'];
 
 
 $specific[] = (array(
-
 'post-title' => $post_title ,
 'post-author' => $post_author,
 'post-description' => $post_description,
@@ -159,26 +138,17 @@ $specific[] = (array(
 'profile-name' => $post_profile_name,
 'article_id' => $post_articleid,
 	));
-
-
-
 }
 echo json_encode(array(
-
 	'items' => $specific,
 	'articles_count' => $articles_counter,
 	'start' => $start,
 	'last' => ($start + $count)>=($articles_counter)? true : false,
-
-
 	));
-
 }
-
 }
 catch(Exception $e)
 {
 	$e->getMessage();
 }
-
 ?>

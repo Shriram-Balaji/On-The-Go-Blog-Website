@@ -36,7 +36,7 @@ else
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="css/layouts/post-old-ie.css">
     <![endif]-->
-    <!--[if gt IE 8]><!-->        <link rel="stylesheet" href="css/post.css">
+    <!--[if gt IE 8]><!-->        <link rel="stylesheet" href="css/global.css">
     <!--<![endif]-->
   
 
