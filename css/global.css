@@ -6,6 +6,11 @@ body {
 #data{
     display: none !important;
 }
+
+.no-margin {
+    margin: 0;
+}
+
 /* The submit button for the update pic form*/
 #propic_submit{
 margin-top: -30px;
