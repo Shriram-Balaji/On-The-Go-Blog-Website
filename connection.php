@@ -2,7 +2,7 @@
 <?php
 try{
 ini_set("display_errors", TRUE);
-$local = true;
+$local = false;
 if ($local) {
   define('DB_HOST', '127.0.0.1'); //ENSURES THE DB CONNECTION//
   define('DB_PORT',  '3306'); 
