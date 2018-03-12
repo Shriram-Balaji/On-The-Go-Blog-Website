@@ -42,7 +42,6 @@ Shriram Balaji   Nadeem Shaik
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-
         window.fbAsyncInit = function () {
           FB.init({
             appId: '799680073475396',
@@ -51,7 +50,6 @@ Shriram Balaji   Nadeem Shaik
             xfbml: true, // parse social plugins on this page
             version: 'v2.0' // use version 2.2
           });
-
 
           FB.getLoginStatus(function (response) {
             statusChangeCallback(response);
@@ -97,23 +95,8 @@ Shriram Balaji   Nadeem Shaik
           FB.getLoginStatus(function (response) {
             statusChangeCallback(response);
           });
-        }
-        $(document).ready(function () {
-          $('#fblogin').click(function () {
-            FB.login(function (response) {
-              if (response.authResponse) {
-                testAPI(); //Get User Information.
-              } else {
-                alert('Authorization failed.');
-              }
-            }, {
-              scope: 'public_profile,email,user_birthday'
-            });
+        };
 
-          });
-          // Here we run a very simple test of the Graph API after login is
-          // successful.  See statusChangeCallback() for when this call is made.
-        });
         function testAPI() {
           console.log('Welcome!  Fetching your information.... ');
           FB.api('/me?fields=id,name,email,picture,first_name,birthday,last_name', function (response) {
@@ -130,6 +113,23 @@ Shriram Balaji   Nadeem Shaik
             console.log('Successful login for: ' + response.name);
           });
         }
+
+        $(document).ready(function () {
+          $('#fblogin').click(function () {
+            FB.login(function (response) {
+              if (response.authResponse) {
+                testAPI(); //Get User Information.
+              } else {
+                alert('Authorization failed.');
+              }
+            }, {
+              scope: 'public_profile,email,user_birthday'
+            });
+
+          });
+          // Here we run a very simple test of the Graph API after login is
+          // successful.  See statusChangeCallback() for when this call is made.
+        });
         //
       </script>
       <div class="logo pure-u-1 pure-u-lg">
@@ -236,7 +236,6 @@ Shriram Balaji   Nadeem Shaik
           });
         });
       </script>
-      <script type="text/javascript" ></script>
     </div>
     </main>
 
