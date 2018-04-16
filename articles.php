@@ -1,7 +1,6 @@
 <?php 
 session_start();
 require_once 'connection.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -24,24 +23,21 @@ require_once 'connection.php';
 	</head>
 	<body class="demo-2">
 
-	<?php
-        try{
-$user_info = $_SESSION['username_id'];
-$article_id = $_GET['article_id'];
-$query = $db->prepare("SELECT * FROM BLOGCONTENT WHERE ARTICLE_ID = '$article_id'");
-$query->execute();
-$results_article = $query->fetch();
-$title = $results_article['TITLE'];
-$category = $results_article['CATEGORY'];
-$description = $results_article['DESCRIPTION'];
-$article = $results_article['ARTICLE'];
-$author = $results_article['AUTHOR'];
-$time = $results_article['USERTIME'];
-$like = $results_article['LIKE_COUNT'];
-
-
-
-}
+<?php
+	try{
+		$user_info = $_SESSION['username_id'];
+		$article_id = $_GET['article_id'];
+		$query = $db->prepare("SELECT * FROM BLOGCONTENT WHERE ARTICLE_ID = '$article_id'");
+		$query->execute();
+		$results_article = $query->fetch();
+		$title = $results_article['TITLE'];
+		$category = $results_article['CATEGORY'];
+		$description = $results_article['DESCRIPTION'];
+		$article = $results_article['ARTICLE'];
+		$author = $results_article['AUTHOR'];
+		$time = $results_article['USERTIME'];
+		$like = $results_article['LIKE_COUNT'];
+	}
 catch(Exception $e){
 	$e->getMessage();
 }
@@ -117,27 +113,24 @@ catch(Exception $e){
 
 		<!--Checking if post is already liked by user and changing css accordingly -->
 		<?php
-$check = $db->prepare("SELECT ID FROM LIKES WHERE AUTHOR = '$user_info' AND ARTICLE_ID = '$article_id'");
+$check = $db->prepare("SELECT * FROM LIKES WHERE AUTHOR = '$user_info' AND ARTICLE_ID = '$article_id'");
 $check->execute();
 $rows = $check->fetch(PDO::FETCH_NUM);
 
-if(!empty($rows)){?>
+if($rows > 0)
+	{?>
 <script>
 $('.heart').css("background-position","right");
 </script>
 <?php
 }
-else if(empty($rows) or $rows == 0)
+else if( $rows == 0)
 {?>
 	<script>
 $('.heart').css("background-position","left");
 </script>
 <?php }
 ?>
-
-
-
-
 		<!-- /container -->
 		<script src="js/classie.js"></script>
 		<script>
@@ -288,10 +281,6 @@ $('.heart').css("background-position","left");
 //like button functionality.
 $('body').on("click",'.heart',function()
 {
-
-
-
-
 var rel =$(this).attr("rel");
 var article_id = $('#hidden').text();
 var profile_name = $('#data').text();
@@ -302,30 +291,21 @@ data: {'article_id': article_id , 'profile_name' : profile_name , 'rel' : rel},
 cache: false,
 success: function(data)
 {
-
 $("#likeCount").html(data);
 if(rel === 'like') 
 {
-$('.heart').attr("rel","unlike"); 
-$('.heart').addClass('heartAnimation');
-$('.heart').css("background-position","right");
-
-
-
+	$('.heart').attr("rel","unlike"); 
+	$('.heart').addClass('heartAnimation');
+	$('.heart').css("background-position","right");
 }
-else
-{
-	if(rel ==='unlike')
-$('.heart').attr("rel","like");
-$('.heart').css("background-position","left");
-$('.heart').removeClass('heartAnimation');
-
-}
+else if(rel ==='unlike') {
+		$('.heart').attr("rel","like");
+		$('.heart').css("background-position","left");
+		$('.heart').removeClass('heartAnimation');
+	}
 }
 }); //ajax end
-
 });//heart click end.
-
 
 		</script>
 	</body>

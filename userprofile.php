@@ -18,36 +18,25 @@ else
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
-
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"><!--for addin fonticons -->
-
 <script src = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src = "//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src='js/jquery.drag-n-crop.js'></script>
 <link rel="stylesheet" href="css/jquery.drag-n-crop.css">
-
-
-  <!--for ie standards-->
+ <!--for ie standards-->
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="css/layouts/post-old-ie.css">
     <![endif]-->
-    <!--[if gt IE 8]><!-->        <link rel="stylesheet" href="css/post.css">
+    <!--[if gt IE 8]><!-->        
     <!--<![endif]-->
-  
-
 <!--popup-->
-
 <link rel="stylesheet" href="jAlert-master/src/jAlert-v3.css" />
-
-<link rel="stylesheet" type="text/css" href="css/prof.css"><link rel="stylesheet" type="text/css" href="css/demo.css">
-
-
+<link rel="stylesheet" href="font/circular/circular.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" type="text/css" href="css/prof.css">
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/popup.js"></script>

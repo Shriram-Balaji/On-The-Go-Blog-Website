@@ -1,24 +1,15 @@
-@import url(//fonts.googleapis.com/css?family=Montserrat);
 
 body
 {
-    font-family: 'Montserrat',sans-serif;
-
+    font-family: 'Circular Book',sans-serif;
 }
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
 }
 
-span.all_icon,span.tech_icon,span.design_icon,span.ent_icon,
-span.fashion_icon,span.travel_icon,span.profile_icon,
-span.settings_icon,span.logout_icon,span.about_icon {
-        position: absolute;
-        left: 7px;
-        margin-top: 16px;
-        z-index: 1;
-        color: white;
-        background: transparent;
+.sidebar-container {
+    margin: 80px 0 1em;
 }
 /*
 Add transition to containers so they can push in and out.
@@ -126,10 +117,9 @@ appears on the left side of the page.
     #menu a {
         color: #FFF;
         border: none;
-        padding: 0.6em 0 0.5em 0.6em;
-        margin-left: 50px;
+        padding: 0.6em 1.25em 0.6em;
         margin-bottom: 0;
-        font-size: 120%;
+        font-size: 18px;
     }
 
     /*
@@ -146,7 +136,6 @@ appears on the left side of the page.
     */
     #menu .pure-menu ul,
     #menu .pure-menu .menu-item-divided {
-        border-top: 1px solid #333;
         margin-top: -15px;
     }
         /*
@@ -154,10 +143,8 @@ appears on the left side of the page.
         */
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-          background-color:transparent;
-            font-size:130%;
-            cursor: pointer;
-           
+          background-color: #2b59ffcc;
+          cursor: pointer;
         }
 
     /*
@@ -167,7 +154,7 @@ appears on the left side of the page.
     #menu .pure-menu-heading {
         border-bottom: none;
         font-size: 110%;
-        color: rgb(75, 113, 151);
+        color: rgb(139, 139, 139);
     }
         /*
         This styles a link within a selected menu item `<li>`.
@@ -180,10 +167,15 @@ appears on the left side of the page.
     This styles the menu heading.
     */
     #menu .pure-menu-heading {
-        font-size: 110%;
+        font-size: 150%;
         /* color: #fff; */
         margin: 0;
         text-align: left;
+        text-transform: capitalize
+    }
+
+    #menu .pure-menu-list .pure-menu-item {
+        height: initial !important;
     }
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
@@ -277,7 +269,7 @@ div#menu {}
 }
 
 @media(max-width:480px){
-        
+    
         #menu a
         {
             font-size:100%;
@@ -285,7 +277,7 @@ div#menu {}
         }
           
         
-        #about_us{
+        #about_us,.about_icon{
             display: none;
         }
    
@@ -294,7 +286,7 @@ span.fashion_icon,span.travel_icon,span.profile_icon,
 span.settings_icon,span.logout_icon,span.about_icon {
         position: absolute;
         margin-left: 20px;
-        margin-top: 5px;
+        margin-top: 10px;
         z-index: 1;
         color: white;
 

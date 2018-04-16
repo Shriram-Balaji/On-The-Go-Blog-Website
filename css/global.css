@@ -1,13 +1,16 @@
-@import "//fonts.googleapis.com/css?family=Raleway:400,300,800|Lora:400italic|Playfair+Display:700";
-@import "//fonts.googleapis.com/css?family=Montserrat";
 body {
     color: #252a3a;
-    font-family: "Raleway",sans-serif;
+    font-family: "Circular Book",sans-serif;
     margin-left: 500px;
 }
 #data{
     display: none !important;
 }
+
+.no-margin {
+    margin: 0;
+}
+
 /* The submit button for the update pic form*/
 #propic_submit{
 margin-top: -30px;
@@ -112,7 +115,7 @@ text-align: center;
 /*search bar output*/
 #output
 {
-    width: 200px;
+width: 200px;
 background: #FFF none repeat scroll 0px 0px;
 border-color: rgba(14, 102, 204, 0.65) #D3D6DB #D3D6DB;
 border-image: none;
@@ -128,7 +131,6 @@ text-align: left;
 position: fixed;
 top: 55px;
 display: none;
-font-family: 'Raleway' !important;
 }
 /*css for the search box ends here*/
 
@@ -172,11 +174,12 @@ font-family: 'Raleway' !important;
 
 /*heading of each categry*/
 #category_heading {
-    font-family: "Raleway",sans-serif !important;
+    font-family: 'Circular Medium',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 100px -100px -170px -233px;
+    position: relative;
 }
 .posts {
-    font-family: "Raleway",sans-serif;
+    font-family: "Inter UI",sans-serif;
     margin-bottom: -150px;
     margin-left: -233px;
     margin-top: 100px;
@@ -185,16 +188,14 @@ font-family: 'Raleway' !important;
     text-rendering : optimizelegibility;
     max-width: 1200px;
 }
-span.all_icon, span.tech_icon, span.design_icon, span.ent_icon, span.fashion_icon, span.travel_icon, span.profile_icon, span.settings_icon, span.logout_icon, span.about_icon {
+/* span.all_icon, span.tech_icon, span.design_icon, span.ent_icon, span.fashion_icon, span.travel_icon, span.profile_icon, span.settings_icon, span.logout_icon, span.about_icon {
     color: white;
     margin-left: 13px;
     margin-top: 14px;
     position: absolute;
     z-index: 1;
-}
+} */
 
-
-}
 .pure-g {
     letter-spacing: normal;
 }
@@ -207,7 +208,7 @@ a {
     box-shadow: none;
 }
 .primary-button {
-    background: #1b98f8 none repeat scroll 0 0;
+    background: #2b59ffcc none repeat scroll 0 0 ;
     color: #fff;
     font-size: 120%;
     height: 42px;
@@ -309,6 +310,7 @@ a {
     color: #222;
     font-size: 2em;
     margin-bottom: 0.2em;
+    font-family: 'Circular Book', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 .post-avatar {
     border-radius: 5px;
@@ -326,7 +328,7 @@ a {
 }
 .post-description {
     color: #444;
-    font-family: "Raleway",sans-serif;
+    font-family: "Inter UI",sans-serif;
     line-height: 1.8em;
 }
 .post-meta {
@@ -340,7 +342,7 @@ a {
     font-size: 80%;
     margin: 0 0.1em;
     padding: 0.3em 1em;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Circular Book',sans-serif;
     border-radius: 2px;
 }
 .post-category-design {
@@ -367,7 +369,7 @@ a {
 
 .post-author {
     color: #2d3e50;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Circular Book',sans-serif;
 }
 @media (max-width: 28em){
 .end
@@ -391,7 +393,7 @@ a {
     margin-bottom: 5px;
     text-align: left;
     float: left;
-    font-family: "Raleway";
+    font-family: "Inter UI";
     border-radius: 3px;
     margin-left:-5px
 }
@@ -452,9 +454,12 @@ div#ui-datepicker-div {
         
     }
 
-    #category_heading {position: absolute;
+    #category_heading {
+            position: relative;
+
     margin-left: -483px;
     top: 50px;font-size: 25px;
+    padding-bottom: 35px;
 }
 
 .primary-button
@@ -510,7 +515,7 @@ margin-top: 40px;
     margin-bottom: 5px;
     text-align: left;
     float: left;
-    font-family: "Raleway";
+    font-family: "Inter UI";
     border-radius: 3px;
     margin-left:0px
 }
@@ -534,9 +539,11 @@ margin-top: 40px;
     text-rendering: optimizelegibility;
 }
 
- #category_heading {position: absolute;
+ #category_heading {position: relative;
     margin-left: -483px;
     top: 50px;font-size: 35px;
+    padding-bottom: 35px;
+
 }
 #recent_post
 {
@@ -576,6 +583,4 @@ margin-bottom: -5px;
 font-size: 15px;
 overflow: hidden;
 }
-}
-
 }
